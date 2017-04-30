@@ -2,6 +2,7 @@
 
 // Dependencies
 @import "pack/seed-publish/_index";
+@import "../config";
 
 @include export(seed-grid) {
   .#{$seed-grid-namespace-row-flex} {
@@ -16,7 +17,7 @@
       &--#{$offset} {
         margin-left: -($size);
         margin-right: -($size);
-        > [class*="#{$seed-grid-namespace-col}"] {
+        > [class^="#{$seed-grid-namespace-col}"] {
           padding-left: $size;
           padding-right: $size;
         }

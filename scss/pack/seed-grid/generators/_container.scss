@@ -1,5 +1,9 @@
 // Generators :: Container
 
+// Dependencies
+@import "pack/seed-breakpoints/_index";
+@import "../config";
+
 @mixin generate-container-max() {
   @each $breakpoint, $width in $seed-container-widths {
     @include breakpoint-up($breakpoint, $seed-breakpoints) {

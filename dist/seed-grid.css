@@ -15,7 +15,7 @@
 
 @media (min-width: 992px) { .o-container--responsive { max-width: 940px; } }
 
-[class*="o-col-"], .o-col { box-sizing: border-box; min-height: 1px; padding-left: 15px; padding-right: 15px; position: relative; width: 100%; }
+[class^="o-col-"], .o-col { box-sizing: border-box; min-height: 1px; position: relative; width: 100%; }
 
 .o-col-0 { width: 0%; }
 
@@ -294,34 +294,36 @@
   .o-col-pull-20\@lg { right: 20%; }
   .o-col-push-20\@lg { left: 20%; } }
 
+[class^="o-row"] > [class^="o-col"] { padding-left: 15px; padding-right: 15px; }
+
 .o-row { box-sizing: border-box; margin-left: -15px; margin-right: -15px; }
 
 .o-row::after { clear: both; content: ""; display: table; }
 
-.o-row > [class*="o-col"] { float: left; }
+.o-row > [class^="o-col"] { float: left; }
 
 .o-row--md { margin-left: -8px; margin-right: -8px; }
 
-.o-row--md > [class*="o-col"] { padding-left: 8px; padding-right: 8px; }
+.o-row--md > [class^="o-col"] { padding-left: 8px; padding-right: 8px; }
 
 .o-row--sm { margin-left: -4px; margin-right: -4px; }
 
-.o-row--sm > [class*="o-col"] { padding-left: 4px; padding-right: 4px; }
+.o-row--sm > [class^="o-col"] { padding-left: 4px; padding-right: 4px; }
 
 .o-row--xs { margin-left: -2px; margin-right: -2px; }
 
-.o-row--xs > [class*="o-col"] { padding-left: 2px; padding-right: 2px; }
+.o-row--xs > [class^="o-col"] { padding-left: 2px; padding-right: 2px; }
 
 .o-row-flex { box-sizing: border-box; display: flex; flex-wrap: wrap; margin-left: -15px; margin-right: -15px; }
 
 .o-row-flex--md { margin-left: -8px; margin-right: -8px; }
 
-.o-row-flex--md > [class*="o-col"] { padding-left: 8px; padding-right: 8px; }
+.o-row-flex--md > [class^="o-col"] { padding-left: 8px; padding-right: 8px; }
 
 .o-row-flex--sm { margin-left: -4px; margin-right: -4px; }
 
-.o-row-flex--sm > [class*="o-col"] { padding-left: 4px; padding-right: 4px; }
+.o-row-flex--sm > [class^="o-col"] { padding-left: 4px; padding-right: 4px; }
 
 .o-row-flex--xs { margin-left: -2px; margin-right: -2px; }
 
-.o-row-flex--xs > [class*="o-col"] { padding-left: 2px; padding-right: 2px; }
+.o-row-flex--xs > [class^="o-col"] { padding-left: 2px; padding-right: 2px; }
