@@ -13,7 +13,7 @@ describe('seed-grid: object :: col', function() {
   var $o = output.$('.o-col');
 
   describe('config', function() {
-    it('should change the default class of namespace is defined', function() {
+    it('should change the default class if namespace is defined', function() {
       var style = `
         $seed-grid-namespace-col: rookie;
         @import "./_index";

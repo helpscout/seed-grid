@@ -13,7 +13,7 @@ describe('seed-grid: object :: container', function() {
   var $o = output.$('.o-container');
 
   describe('config', function() {
-    it('should change the default class of namespace is defined', function() {
+    it('should change the default class if namespace is defined', function() {
       var style = `
         $seed-grid-namespace-container: rookie;
         @import "./_index";
@@ -24,6 +24,20 @@ describe('seed-grid: object :: container', function() {
 
       expect($c.exists()).to.be.false;
       expect($o.exists()).to.be.true;
+    });
+
+    it('should change the default width if widths are defined', function() {
+      var width = '500px';
+      var style = `
+        $seed-container-widths: (
+          xl: ${width},
+        ) !default;
+        @import "./_index";
+      `;
+      var output = barista({ content: style });
+      var $c = output.$('.o-container');
+
+      expect($c.getProp('max-width')).to.equal(width);
     });
   });
 
