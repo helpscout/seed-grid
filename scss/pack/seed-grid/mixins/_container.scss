@@ -1,5 +1,8 @@
 // Mixins :: Container
 
+@import "pack/seed-breakpoints/_index";
+@import "../config";
+
 @mixin container-calculate-widths() {
   @each $breakpoint, $width in $seed-container-widths {
     @include breakpoint-up($breakpoint, $seed-breakpoints) {

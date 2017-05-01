@@ -5,8 +5,16 @@
 @import "../config";
 
 @include export(seed-grid) {
+  [class^="#{$seed-grid-namespace-row}"] {
+    > [class^="#{$seed-grid-namespace-col}"] {
+      padding-left: $seed-grid-gutter-offset;
+      padding-right: $seed-grid-gutter-offset;
+    }
+  }
+
   .#{$seed-grid-namespace-row} {
     box-sizing: border-box;
+    display: block;
     margin-left: -($seed-grid-gutter-offset);
     margin-right: -($seed-grid-gutter-offset);
 
@@ -16,16 +24,15 @@
       display: table;
     }
 
-    > [class*="#{$seed-grid-namespace-col}"] {
+    > [class^="#{$seed-grid-namespace-col}"] {
       float: left;
     }
 
-    // Modifiers: Sizes
     @each $offset, $size in $seed-grid-gutter-offset-sizes {
       &--#{$offset} {
         margin-left: -($size);
         margin-right: -($size);
-        > [class*="#{$seed-grid-namespace-col}"] {
+        > [class^="#{$seed-grid-namespace-col}"] {
           padding-left: $size;
           padding-right: $size;
         }

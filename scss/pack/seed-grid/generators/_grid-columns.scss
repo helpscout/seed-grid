@@ -1,7 +1,9 @@
 // Generators :: Grid
 
 // Dependencies
+@import "pack/seed-breakpoints/_index";
 @import "../mixins/col";
+@import "../config";
 
 @mixin generate-grid-columns($columns: $seed-grid-columns, $gutter: $seed-grid-gutter, $breakpoints: $seed-breakpoints) {
   $breakpoint-counter: 0;
