@@ -1,11 +1,11 @@
-// Test :: Component :: Container
+// Test :: object :: Container
 /* globals describe: true, it: true */
 'use strict';
 
 var barista = require('seed-barista');
 var expect = require('chai').expect;
 
-describe('seed-grid: component :: container', function() {
+describe('seed-grid: object :: container', function() {
   var style = `
     @import "./_index";
   `;

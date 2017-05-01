@@ -1,11 +1,11 @@
-// Test :: Component :: Row
+// Test :: object :: Row
 /* globals describe: true, it: true */
 'use strict';
 
 var barista = require('seed-barista');
 var expect = require('chai').expect;
 
-describe('seed-grid: component :: row', function() {
+describe('seed-grid: object :: row', function() {
   var style = `
     @import "./_index";
   `;
