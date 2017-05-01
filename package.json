@@ -4,6 +4,13 @@
   "description": "Grid system pack for Seed",
   "main": "index.js",
   "homepage": "https://github.com/helpscout/seed-grid",
+  "files": [
+    "dist",
+    "scss",
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "banner": "node ./scripts/banner.js",
     "build:main": "node ./scripts/build.js",
@@ -11,7 +18,9 @@
     "dev": "mocha --watch test/*.js",
     "prepublish": "npm run test",
     "test:mocha": "mocha",
-    "test": "npm run test:mocha",
+    "test:qunit:responsive:sm": "node-qunit-phantomjs ./test/qunit/index.html --verbose '{\"viewportSize\":{\"width\":600,\"height\":1000}}'",
+    "test:qunit": "npm run test:qunit:responsive:sm",
+    "test": "npm run test:mocha && npm run test:qunit",
     "version": "npm run build && git add dist"
   },
   "repository": {
@@ -44,8 +53,11 @@
     "node": ">=4"
   },
   "devDependencies": {
+    "jquery": "3.2.1",
     "mkdirp": "^0.5.1",
+    "node-qunit-phantomjs": "1.5.0",
     "node-sass": "^3.10.0",
+    "qunit": "1.0.0",
     "seed-bistro": "0.1.1"
   },
   "dependencies": {
